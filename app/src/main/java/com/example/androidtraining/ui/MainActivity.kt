@@ -28,6 +28,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         println("Hello World What are you Ding")
+
         lifecycleScope.launch {
             collectLatestLifeCycle(viewModel.stateFlow) {
 
