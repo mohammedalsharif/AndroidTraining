@@ -1,4 +1,4 @@
-package com.example.androidtraining
+package com.example.androidtraining.ui
 
 import android.util.Log
 import androidx.compose.runtime.mutableStateOf
@@ -65,16 +65,16 @@ class MainViewModel : ViewModel() {
 
     fun multiNumber(number: Int) {
         viewModelScope.launch {
-            _sharedFlow.emit(number)
+//            _sharedFlow.emit(number)
         }
     }
 
 
     fun incrementCounter() {
         _stateFlow.value++
-    }
+    }}
 
-    fun collectTime() {
+//    fun collectTime() {
 //        val flow = (1..5).asFlow()
 //        viewModelScope.launch {
 //            flow.flatMapConcat { value ->
@@ -91,6 +91,6 @@ class MainViewModel : ViewModel() {
 //                    it % 2 == 0
 //                }
 //            println("The count is: $count")
-
-    }
-}
+//
+//    }
+//}}

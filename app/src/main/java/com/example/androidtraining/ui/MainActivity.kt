@@ -1,4 +1,4 @@
-package com.example.androidtraining
+package com.example.androidtraining.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -27,6 +27,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
         lifecycleScope.launch {
             collectLatestLifeCycle(viewModel.stateFlow) {
 
@@ -44,7 +45,9 @@ class MainActivity : ComponentActivity() {
             AndroidTrainingTheme {
                 Box(modifier = Modifier.fillMaxSize()) {
                     Button(
-                        onClick = { viewModel.incrementCounter() },
+                        onClick = { viewModel.incrementCounter()
+
+                                  },
                         modifier = Modifier.align(Alignment.Center)
                     ) {
                         Text(
@@ -57,6 +60,7 @@ class MainActivity : ComponentActivity() {
 
             }
         }
+
     }
 
     fun <T> ComponentActivity.collectLatestLifeCycle(flow: Flow<T>, collect: (T) -> Unit) {
@@ -67,4 +71,6 @@ class MainActivity : ComponentActivity() {
         }
 
     }
+
+
 }
