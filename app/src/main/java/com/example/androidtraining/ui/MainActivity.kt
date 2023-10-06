@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
+        println("Hello World What are you Ding")
         lifecycleScope.launch {
             collectLatestLifeCycle(viewModel.stateFlow) {
 
